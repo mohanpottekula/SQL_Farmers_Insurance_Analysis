@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Group: upgrad" />
+  <title>SQL Assignment: Farmers Insurance Analysis (PMFBY)</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="/dev/stdin" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">SQL Assignment: Farmers Insurance Analysis
+(PMFBY)</h1>
+<p class="subtitle">Assignment ID: SQL/02 - Executive Summary</p>
+<p class="author">Group: upgrad</p>
+</header>
+<h2 id="problem-and-approach">Problem and Approach</h2>
+<p>PMFBY is the central crop insurance scheme. Using NDAP data for 2018
+to 2021 we looked at who is covered, what is paid as premium and how
+this changes over time. The 1,870 row CSV was loaded into MySQL and the
+29 questions in the starter file were answered.</p>
+<h2 id="key-insights">Key Insights</h2>
+<p>Coverage is very concentrated. MP, Maharashtra, UP, Rajasthan and
+Tamil Nadu account for about 70 percent of farmers in the data. Bid
+(MH), Ujjain (MP) and Latur (MH) lead on cumulative premium.</p>
+<p>Enrolment fell from about 1.5 crore in 2018 to 1.07 crore in 2021,
+while gross premium grew from Rs. 73 cr to Rs. 131 cr. Fewer farmers but
+costlier policies.</p>
+<p>The cost has moved towards the government. The farmer’s share of
+gross premium dropped from 19 percent in 2018 to about 11 percent in
+2021. State and central together now fund close to 90 percent.</p>
+<p>Female participation stays around 14 to 16 percent in all four years.
+Small and marginal farmers form 78 to 86 percent of the pool, the
+audience the scheme is meant to reach.</p>
+<h2 id="assumptions">Assumptions</h2>
+<ul>
+<li>Premium columns are in lakhs and InsuredLandArea in thousand
+hectares (<code>column_description.csv</code>). Thresholds (500K, 20 cr,
+100 cr) were converted to raw units in the queries.</li>
+<li>The <code>Year</code> column is loaded as <code>Year_</code> since
+Year is reserved in MySQL. <code>srcYear</code> and <code>Year_</code>
+are kept in sync.</li>
+<li>Source is one table, so joins use derived subqueries.</li>
+<li>Census population repeats per district, so state population uses max
+per district then summed.</li>
+</ul>
+</body>
+</html>

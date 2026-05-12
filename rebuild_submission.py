@@ -5,12 +5,12 @@ import pathlib
 
 ROOT = pathlib.Path("/Users/dhanesh/Desktop/p/mohan-db-assignment")
 STARTER = ROOT / "SQL_Assg_PMFBY_Dataset_Starter" / "SQL_Assg_Farmers_Insurance_Questions_Starter.sql"
-OUT = ROOT / "submission" / "SQL_Farmers_Insurance_Analysis_upgrad.sql"
+OUT = ROOT / "submission" / "SQL_Farmers_Insurance_Analysis_TeamAlpha.sql"
 
 HEADER = """\
 -- SQL Assignment: Farmers Insurance Analysis (PMFBY)
 -- Assignment ID: SQL/02
--- Group: upgrad
+-- Group: TeamAlpha
 
 -- Note: the CSV column "Year" was loaded as Year_ in the table because Year is a
 -- reserved word in MySQL. Premium columns are in lakhs and InsuredLandArea is in

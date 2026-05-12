@@ -1,6 +1,6 @@
 -- SQL Assignment: Farmers Insurance Analysis (PMFBY)
 -- Assignment ID: SQL/02
--- Group: upgrad
+-- Group: TeamAlpha
 
 -- Note: the CSV column "Year" was loaded as Year_ in the table because Year is a
 -- reserved word in MySQL. Premium columns are in lakhs and InsuredLandArea is in

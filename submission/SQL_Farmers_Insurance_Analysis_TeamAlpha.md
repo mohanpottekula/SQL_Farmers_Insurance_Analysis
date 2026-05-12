@@ -1,6 +1,6 @@
 ---
 title: "SQL Assignment: Farmers Insurance Analysis (PMFBY)"
-author: "Group: upgrad"
+author: "Group: TeamAlpha"
 subtitle: "Assignment ID: SQL/02 - Executive Summary"
 geometry: margin=2.2cm
 ---
